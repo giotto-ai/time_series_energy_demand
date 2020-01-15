@@ -1,8 +1,7 @@
 # Predicting ....
 
 ## What is it?
-This repository contains the code for the blog post 'TITLE HERE' [LINK HERE] where we use the time series library giotto-time
-[LINK HERE] to predict the export volumes 
+This repository contains the code for the blog post 'TITLE HERE' [LINK HERE] where we use the Python time series library giotto-time [LINK HERE] to predict the export volumes using a generalized autoregression model. 
 
 ## Getting started
 You want to dive right in? The easiest way to get started is to create a conda environment as follows:
@@ -15,4 +14,4 @@ Then the notebook 'TITLE HERE' will walk you through the analysis and the predic
 
 ## Results
 
-
+Figure here [actual values vs. predictions], score, 
