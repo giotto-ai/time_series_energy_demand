@@ -2,7 +2,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 
-def plot_time_series(df, y_columns, names, title='', x_axis_title='', y_axis_titles = ['', '']):
+def plot_time_series(df, y_columns, names=['trace_1', 'trace_2'], title='', x_axis_title='', y_axis_titles = ['', '']):
     """Plot up to two time series with different y-axes.
     
     Parameters
