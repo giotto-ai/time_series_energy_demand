@@ -1,4 +1,4 @@
-# Predicting ....
+# Energy Demand Prediction in Switzerland
 
 ## What is it?
 This repository contains the code for the blog post 'TITLE HERE' [LINK HERE] where we use the Python time series library giotto-time [LINK HERE] to predict the export volumes using a generalized autoregression model. 
