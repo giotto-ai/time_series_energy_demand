@@ -1,7 +1,9 @@
-# Energy Demand Prediction in Switzerland
+<img src="https://www.giotto.ai/static/vector/logo.svg" alt="logo" width="850"/>
+
+# Energy Demand Prediction in Switzerland with giotto-time
 
 ## What is it?
-This repository contains the code for the blog post 'TITLE HERE' [LINK HERE] where we use the Python time series library giotto-time [https://github.com/giotto-ai/giotto-time] to predict the mean daily energy demand (in MW) in Switzerland 21 days ahead using a generalized autoregression model. 
+This repository contains the code for the blog post 'Energy Demand Prediction in Switzerland with giotto-time' [LINK HERE] where we use the Python time series library giotto-time [https://github.com/giotto-ai/giotto-time] to predict the mean daily energy demand (in MW) in Switzerland 21 days ahead using a generalized autoregression model. 
 
 The notebook 'energy_demand_time_series.ipynb' showcases the most important functionalities of giotto-time and how to use them to:
 * remove trends and deal with seasonalities
@@ -10,15 +12,15 @@ The notebook 'energy_demand_time_series.ipynb' showcases the most important func
 * use a generalized autoregression model to make predictions using the 'fit/predict' methods.
 
 ## Getting started
-You want to dive right in? The easiest way to get started is to create a conda environment as follows:
+You want to start right away? The easiest way to get started is to create a conda environment as follows:
 ```
 conda create python=3.7 --name time -y
 conda activate time
 pip install -r requirements.txt
 ```
-Then the notebook 'TITLE HERE' will walk you through the analysis and the prediction steps.
+Then the notebook 'energy_demand_time_series' will walk you through the analysis and the prediction steps.
 
 ## Results
 
 ![alt text](data/figures/predictions.png)
-Figure here [actual values vs. predictions], score, 
+Figure here [actual values vs. predictions], score, table
