@@ -24,3 +24,16 @@ Then the notebook 'energy_demand_time_series' will walk you through the analysis
 
 ![alt text](data/figures/predictions.png)
 Figure here [actual values vs. predictions], score, table
+
+
+|                               | rel. mean abs. error   | rel. mean squared error   | max. error   | SMAPE   | coeff. of determination   |
+|:------------------------------|:-----------------------|:--------------------------|:-------------|:--------|:--------------------------|
+| baseline                      | 0.14                   | 146.09                    | 2206.57      | 0.14    | -0.0                      |
+| GAR Random Forest             | 0.08                   | 52.67                     | 1588.69      | 0.08    | 0.64                      |
+| GAR Gradient Boosting         | 0.08                   | 47.53                     | 1579.78      | 0.07    | 0.68                      |
+| GAR Lin. Reg.                 | 0.07                   | 41.65                     | 1499.79      | 0.07    | 0.73                      |
+| Lin. Reg. with max error loss | 0.16                   | 174.82                    | 2319.84      | 0.18    | -0.23                     |
+| Lin. Reg. with smape loss     | 0.08                   | 46.53                     | 1420.57      | 0.08    | 0.7                       |
+
+---
+
