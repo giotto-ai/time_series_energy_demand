@@ -23,7 +23,7 @@ Then the notebook 'energy_demand_time_series' will walk you through the analysis
 ## Results
 In this section we present the results. An important point for this directory is to show different models giotto-learn has to offer. In the table below we list the results for different models and different metrics.
 
-![alt text](data/figures/predictions.png)
+![alt text](data/figures/comparison.png)
 Figure here [actual values vs. predictions], score, table
 
 
