@@ -16,6 +16,19 @@ def relative_mean_absolute_error(y_true, y_pred):
     diff = np.abs(y_true-y_pred)
     return np.mean(diff/y_true)
 
+def relative_mean_squared_error(y_true, y_pred):
+    """Calculate the relative mean squared error
+
+    Parameters
+    ----------
+    y_true : array-like object
+        The reference values
+    y_pred : array-like object
+        The predicted values
+    """
+    diff_squred = np.abs(y_true-y_pred)**2
+    return np.mean(diff_squred/y_true)
+
 def calculate_score(y_true, y_pred, metric=mean_absolute_error):
     """Function to calculate a score with a given metric for the output of the GAR model
     
