@@ -21,6 +21,7 @@ pip install -r requirements.txt
 Then the notebook 'energy_demand_time_series' will walk you through the analysis and the prediction steps.
 
 ## Results
+In this section we present the results. An important point for this directory is to show different models giotto-learn has to offer. In the table below we list the results for different models and different metrics.
 
 ![alt text](data/figures/predictions.png)
 Figure here [actual values vs. predictions], score, table
