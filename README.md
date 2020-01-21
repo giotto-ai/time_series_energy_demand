@@ -27,6 +27,6 @@ In this section we present the results. The figure below shows the reference val
 ![alt text](data/figures/comparison.png)
 
 
-An important point for this tutorial is to show different models giotto-time has to offer. In the table below we list the results for different models and with different metrics.
+An important point for this tutorial is to show different models giotto-time has to offer. In the table below we list the results for different models and with different metrics. The best results per column are marked in yellow.
 
 ![alt text](data/figures/comparison_table.png)
