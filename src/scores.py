@@ -5,7 +5,6 @@ import pandas as pd
 
 def relative_mean_absolute_error(y_true, y_pred):
     """Calculate the relative mean absolute error
-
     Parameters
     ----------
     y_true : array-like object
@@ -18,7 +17,6 @@ def relative_mean_absolute_error(y_true, y_pred):
 
 def relative_mean_squared_error(y_true, y_pred):
     """Calculate the relative mean squared error
-
     Parameters
     ----------
     y_true : array-like object
@@ -27,7 +25,7 @@ def relative_mean_squared_error(y_true, y_pred):
         The predicted values
     """
     diff_squared = np.abs(y_true-y_pred)**2
-    return np.mean(diff_squared/y_true)
+    return np.mean(diff_squared/(y_true**2))
 
 def calculate_score(y_true, y_pred, metric=mean_absolute_error):
     """Function to calculate a score with a given metric for the output of the GAR model
@@ -50,7 +48,6 @@ def calculate_score(y_true, y_pred, metric=mean_absolute_error):
 
 def highlight_top(data, color='yellow'):
     """Highlight the top value of the score table
-
     Parameters
     ----------
     data : pandas Series
@@ -63,5 +60,5 @@ def highlight_top(data, color='yellow'):
     if data.name == 'coeff. of determination':
         is_max = data == data.max() # because top value is 1.0 (larger is better)
     else:
-        is_max = data == data.min() # others are error functions (smaller is better)
+        is_max = data == data.min() # others are error functions (smaller is better)
     return [attr if v else '' for v in is_max]
