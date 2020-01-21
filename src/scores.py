@@ -40,13 +40,16 @@ def calculate_score(y_true, y_pred, metric=mean_absolute_error):
         A function that calculates a score and takes as input y_true and y_pred (e.g.
         from scikit-learn)
     """
-    df_results = pd.DataFrame([y_pred.values.flatten(), y_true.values.flatten()]).T
-    df_results.columns = ['y_pred', 'y_true']
+    df_results = pd.DataFrame(y_true.values, 
+                                index=y_true.index, 
+                                columns=['left']).join(pd.DataFrame(y_pred.values, 
+                                                                    index=y_pred.index)).dropna()
+    df_results.columns = ['y_true', 'y_pred']
     df_results.dropna(axis='rows', inplace=True)
     score = metric(df_results['y_true'], df_results['y_pred'])
     return score
 
-def highlight_top(data, color='yellow'):
+def highlight_top(data, color='yellow', greater_is_better=False):
     """Highlight the top value of the score table
     Parameters
     ----------
@@ -54,11 +57,16 @@ def highlight_top(data, color='yellow'):
         The series (columns of the dataframe) return by df.apply()
     color : str, default: 'yellow'
         Color to use to mark the top value for each column
+    greater_is_better : boolean, default: False
+        For the correlation test, greater is better (and don't highlight the diagonal)
     """
     attr = 'background-color: {}'.format(color)
     
     if data.name == 'coeff. of determination':
         is_max = data == data.max() # because top value is 1.0 (larger is better)
     else:
-        is_max = data == data.min() # others are error functions (smaller is better)
+        if greater_is_better==False:
+            is_max = data == data.min() # others are error functions (smaller is better)
+        else:
+            is_max = data == data.max()
     return [attr if v else '' for v in is_max]
