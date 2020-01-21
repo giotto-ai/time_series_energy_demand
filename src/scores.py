@@ -26,8 +26,8 @@ def relative_mean_squared_error(y_true, y_pred):
     y_pred : array-like object
         The predicted values
     """
-    diff_squred = np.abs(y_true-y_pred)**2
-    return np.mean(diff_squred/y_true)
+    diff_squared = np.abs(y_true-y_pred)**2
+    return np.mean(diff_squared/y_true)
 
 def calculate_score(y_true, y_pred, metric=mean_absolute_error):
     """Function to calculate a score with a given metric for the output of the GAR model
@@ -39,7 +39,7 @@ def calculate_score(y_true, y_pred, metric=mean_absolute_error):
     y_pred : pandas DataFrame
         The dataframe with the predicted values, i.e. the output of the GAR model
     metric : object, optional, default: mean_absolute_error (from scikit-learn)
-        A function that calculates a score and takes as input y_true an y_pred (e.g.
+        A function that calculates a score and takes as input y_true and y_pred (e.g.
         from scikit-learn)
     """
     df_results = pd.DataFrame([y_pred.values.flatten(), y_true.values.flatten()]).T
@@ -47,3 +47,21 @@ def calculate_score(y_true, y_pred, metric=mean_absolute_error):
     df_results.dropna(axis='rows', inplace=True)
     score = metric(df_results['y_true'], df_results['y_pred'])
     return score
+
+def highlight_top(data, color='yellow'):
+    """Highlight the top value of the score table
+
+    Parameters
+    ----------
+    data : pandas Series
+        The series (columns of the dataframe) return by df.apply()
+    color : str, default: 'yellow'
+        Color to use to mark the top value for each column
+    """
+    attr = 'background-color: {}'.format(color)
+    
+    if data.name == 'coeff. of determination':
+        is_max = data == data.max() # because top value is 1.0 (larger is better)
+    else:
+        is_max = data == data.min() # others are error functions (smaller is better)
+    return [attr if v else '' for v in is_max]
