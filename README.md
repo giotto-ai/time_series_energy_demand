@@ -36,7 +36,7 @@ An important point for this tutorial is to show different models giotto-time has
 | GAR Gradient Boosting         | 0.08                   | 47.53                     | 1579.78      | 0.07    | 0.68                      |
 | GAR Lin. Reg.                 | 0.07                   | 41.65                     | 1499.79      | 0.07    | 0.73                      |
 | Lin. Reg. with max error loss | 0.16                   | 174.82                    | 2319.84      | 0.18    | -0.23                     |
-| Lin. Reg. with smape loss     | 0.08                   | 46.53                     | 1420.57      | 0.08    | 0.7                       |
+| Lin. Reg. with SMAPE loss     | 0.08                   | 46.53                     | 1420.57      | 0.08    | 0.7                       |
 
 ---
 
