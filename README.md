@@ -27,16 +27,6 @@ In this section we present the results. The figure below shows the reference val
 ![alt text](data/figures/comparison.png)
 
 
-An important point for this tutorial is to show different models giotto-time has to offer. In the table below we list the results for different models and with different metrics.
+An important point for this tutorial is to show different models giotto-time has to offer. In the table below we list the results for different models and with different metrics. The best results per column are marked in yellow.
 
-|                               | rel. mean abs. error   | rel. mean squared error   | max. error   | SMAPE   | coeff. of determination   |
-|:------------------------------|:-----------------------|:--------------------------|:-------------|:--------|:--------------------------|
-| baseline                      | 0.14                   | 146.09                    | 2206.57      | 0.14    | -0.0                      |
-| GAR Random Forest             | 0.08                   | 52.67                     | 1588.69      | 0.08    | 0.64                      |
-| GAR Gradient Boosting         | 0.08                   | 47.53                     | 1579.78      | 0.07    | 0.68                      |
-| GAR Lin. Reg.                 | 0.07                   | 41.65                     | 1499.79      | 0.07    | 0.73                      |
-| Lin. Reg. with max error loss | 0.16                   | 174.82                    | 2319.84      | 0.18    | -0.23                     |
-| Lin. Reg. with SMAPE loss     | 0.08                   | 46.53                     | 1420.57      | 0.08    | 0.7                       |
-
----
-
+![alt text](data/figures/comparison_table.png)
