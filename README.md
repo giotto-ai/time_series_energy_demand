@@ -3,7 +3,7 @@
 # Energy Demand Prediction in Switzerland with giotto-time
 
 ## What is it?
-This repository contains the code for the blog post 'Energy Demand Prediction in Switzerland with giotto-time' [LINK HERE] where we use the Python time series library giotto-time [https://github.com/giotto-ai/giotto-time] to predict the mean daily energy demand (in MW) in Switzerland 21 days ahead using a generalized autoregression model. 
+This repository contains the code for the blog post 'Energy Demand Prediction in Switzerland with giotto-time' [LINK HERE] where we use the Python time series library giotto-time [https://github.com/giotto-ai/giotto-time] to predict the mean daily energy demand (in megawatts) in Switzerland 21 days ahead using a generalized autoregression model. 
 
 The notebook 'energy_demand_time_series.ipynb' showcases the most important functionalities of giotto-time and how to use them to:
 * remove trends and deal with seasonalities
