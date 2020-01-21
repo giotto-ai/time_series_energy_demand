@@ -10,7 +10,7 @@ The
 * remove trends and deal with seasonalities
 * make a causality test and thereby find the ideal shift between one time series and another to make predictions.
 * easily create a range of different features
-* use a generalized autoregression model to make predictions using the 'fit/predict' methods.
+* use generalized autoregression models and linear regression with custom loss functions to make predictions using the 'fit/predict' methods.
 
 ## Getting started
 You want to start right away? The easiest way to get started is to create a conda environment as follows:
@@ -27,7 +27,7 @@ In this section we present the results. The figure below shows the reference val
 ![alt text](data/figures/comparison.png)
 
 
-An important point for this directory is to show different models giotto-time has to offer. In the table below we list the results for different models and different metrics.
+An important point for this tutorial is to show different models giotto-time has to offer. In the table below we list the results for different models and with different metrics.
 
 |                               | rel. mean abs. error   | rel. mean squared error   | max. error   | SMAPE   | coeff. of determination   |
 |:------------------------------|:-----------------------|:--------------------------|:-------------|:--------|:--------------------------|
