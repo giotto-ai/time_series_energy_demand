@@ -2,7 +2,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 
-def plot_time_series(df, y_columns, title='', x_axis_title='', y_axis_title = ''):
+def plot_time_series(df, y_columns, title='', x_axis_title='', y_axis_title = '', fontsize=None):
     """Plot different time series with the same y-axis.
     
     Parameters
@@ -17,6 +17,8 @@ def plot_time_series(df, y_columns, title='', x_axis_title='', y_axis_title = ''
         Title of the x-axis
     y_axis_titles : list, optional, default: ['', '']
         List of y_axis_titles to use. Maximal length = 2
+    fontsize : int, optional, default: None
+        Fontsize to use
     """
     x = df.index
     
@@ -35,6 +37,17 @@ def plot_time_series(df, y_columns, title='', x_axis_title='', y_axis_title = ''
         'y':0.9,
         'x':0.5,
         }
+    )
+
+    if fontsize != None:
+        fig.update_layout(
+            title={
+                'text':title,
+                'y':0.9,
+                'x':0.5,
+            },
+            font=dict(
+                size=fontsize)
     )
 
     # Set x-axis title
