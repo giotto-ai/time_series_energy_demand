@@ -6,9 +6,9 @@
 This repository contains the code for the blog post 'Energy Demand Prediction in Switzerland with giotto-time' [LINK HERE] where we use the Python time series library [giotto-time](https://github.com/giotto-ai/giotto-time) to predict the mean daily energy demand (in megawatts) in Switzerland 21 days ahead using generalized autoregression models and linear regression with custom loss functions, both of which are provided by giotto-time. 
 
 The 'energy_demand_time_series.ipynb' showcases the most important functionalities of giotto-time and how to use them to:
-* remove trends and deal with seasonalities
-* make a causality test and thereby find the ideal shift between one time series and another to make predictions.
-* easily create a range of different features
+* remove trends and deal with seasonalities,
+* make a causality test and thereby find the ideal shift between one time series and another to make predictions,
+* easily create a range of different features,
 * use generalized autoregression models and linear regression with custom loss functions to make predictions using the 'fit/predict' methods.
 
 ## Getting started
