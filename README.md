@@ -1,9 +1,9 @@
-<img src="https://www.giotto.ai/static/vector/logo.svg" alt="logo" width="850"/>
+![logo](https://raw.githubusercontent.com/giotto-ai/giotto-tda/master/doc/images/tda_logo.svg)
 
 # Energy Demand Prediction in Switzerland with giotto-time
 
 ## What is it?
-This repository contains the code for the blog post 'Energy Demand Prediction in Switzerland with giotto-time' (https://towardsdatascience.com/getting-started-with-giotto-time-d9b2088d60ca) where we use the Python time series library [giotto-time](https://github.com/giotto-ai/giotto-time) to predict the mean daily energy demand (in megawatts) in Switzerland 21 days ahead using generalized autoregression models and linear regression with custom loss functions, both of which are provided by giotto-time. 
+This repository contains the code for the [blog post](https://towardsdatascience.com/getting-started-with-giotto-time-d9b2088d60ca) 'Energy Demand Prediction in Switzerland with giotto-time' where we use the Python time series library [giotto-time](https://github.com/giotto-ai/giotto-time) to predict the mean daily energy demand (in megawatts) in Switzerland 21 days ahead using generalized autoregression models and linear regression with custom loss functions, both of which are provided by giotto-time. 
 
 The 'energy_demand_time_series.ipynb' showcases the most important functionalities of giotto-time and how to use them to:
 * remove trends and deal with seasonalities,
